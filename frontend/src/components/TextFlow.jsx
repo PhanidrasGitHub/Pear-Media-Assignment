@@ -45,7 +45,7 @@ function TextFlow({ onImageGenerated }) {
     setError("");
 
     try {
-      const res = await fetch("http://localhost:5000/generate-image", {
+      const res = await fetch(`${import.meta.env.VITE_API_BASE_URL}/generate-image`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
